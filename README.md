@@ -1,5 +1,6 @@
-- Data was scraped from GitHub to analyze top developers in Shanghai with significant social following.
-`import requests
+- Data was scraped from GitHub to analyze top developers in Shanghai with significant social following. The following code was used:-
+```
+import requests
 import csv
 
 GITHUB_TOKEN = ""
@@ -83,7 +84,8 @@ for user in users:
     user_repos.extend(get_user_repos(user["login"]))
 
 save_to_csv("users.csv", users, fieldnames=list(users[0].keys()))
-save_to_csv("repositories.csv", user_repos, fieldnames=list(user_repos[0].keys()))`
+save_to_csv("repositories.csv", user_repos, fieldnames=list(user_repos[0].keys()))
+```
 
 - A surprising finding: Over 60% of popular repositories in Shanghai are written in JavaScript.
 - Recommendation: Developers in Shanghai may want to explore more languages like Python to diversify their skillset.
